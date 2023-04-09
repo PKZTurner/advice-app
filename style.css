@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+body {
+  background-color: #1f2631;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 270px;
+  background-color: #303b48;
+  width: 370px;
+  height: 290px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: relative; /* add position property */
+}
+
+.advice-container {
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative; /* add position property */
+}
+h1 {
+  font-size: 13px;
+  color: hsl(150, 100%, 66%);
+  font-weight: light;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+p {
+  margin-bottom: auto;
+  font-size: 28px;
+  color: rgb(224, 220, 220);
+  flex-grow: 1;
+  letter-spacing: 2.5px;
+  font-weight: light;
+}
+.horizontal-line {
+  display: flex;
+  flex-direction: row;
+}
+
+hr {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 120%;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(204, 202, 202, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+}
+.dice {
+  padding-bottom: 5px;
+  justify-items: center;
+  align-self: flex-end;
+  width: 55px;
+  height: 55px;
+  font-size: 40px;
+  text-align: center;
+  background-color: hsl(150, 100%, 66%);
+  cursor: pointer;
+  border: none;
+  border-radius: 70%;
+  color: hsl(193, 100%, 32%);
+  position: absolute; /* add position property */
+  bottom: -27.5px; /* use bottom property to position button at bottom of container */
+  left: 50%; /* use left property to horizontally center button */
+  transform: translateX(
+    -50%
+  ); /* use transform property to horizontally center button */
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 2.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* styles for mobile devices with a max width of 375px */
+@media (max-width: 375px) {
+  .main-container {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #303b48;
+    width: 370px;
+    height: 380px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+}
+/* .attribution {
+  flex-direction: row;
+  font-size: 11px;
+  /* text-align: center; */
+
+/* .attribution a {
+  color: hsl(228, 45%, 44%);
+}  */
